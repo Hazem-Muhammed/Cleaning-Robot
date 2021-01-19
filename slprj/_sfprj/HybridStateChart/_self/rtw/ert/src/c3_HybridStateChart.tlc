@@ -1,0 +1,109 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   13 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "lastMajorTime"\
+      Description  "LastMajorTime"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_active_c3_HybridStateChart"\
+      Description  "StateIsActive"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Ground_Cleaning_Robot"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Ground_Cleaning_Robot"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Movement"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Ground_Cleaning_Robot.Robot_ON.Movement"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "was_Movement"\
+      Description  "StatePrevActiveChild"\
+      SFName       ""\
+      Path         "Ground_Cleaning_Robot.Robot_ON.Movement"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Cleaning"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Ground_Cleaning_Robot.Robot_ON.Cleaning"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "was_Cleaning"\
+      Description  "StatePrevActiveChild"\
+      SFName       ""\
+      Path         "Ground_Cleaning_Robot.Robot_ON.Cleaning"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "is_Charging"\
+      Description  "StateActiveChild"\
+      SFName       ""\
+      Path         "Ground_Cleaning_Robot.Robot_ON.Charging"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "was_Charging"\
+      Description  "StatePrevActiveChild"\
+      SFName       ""\
+      Path         "Ground_Cleaning_Robot.Robot_ON.Charging"\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "temporalCounter_i1"\
+      Description  "TemporalCounter"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "presentTime"\
+      Description  "CurrentCount"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "elapsedTime"\
+      Description  "ElapsedCount"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+    ChartData {\
+      Name         "previousTime"\
+      Description  "PreviousCount"\
+      SFName       ""\
+      Path         ""\
+      SrcLocation  ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
